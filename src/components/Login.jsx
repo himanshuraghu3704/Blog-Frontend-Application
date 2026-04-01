@@ -28,12 +28,12 @@ function Login() {
         }
     }
   return (
-    <div className='flex item-center justify-center w-full'>
+    <div className='flex items-center justify-center w-full mt-4 sm:mt-8 px-4 sm:px-0'>
         <div className={`mx-auto w-full max-w-lg bg-gray-100 
-            rounded-xl p-10 border border-black/10`}>
+            rounded-xl p-6 sm:p-10 border border-black/10`}>
                 <div className='mb-2 flex justify-center'>
-                    <span className='inline-block w-full max-w-[100px]'>
-                        <Logo width='100%' />
+                    <span className='inline-block w-fit'>
+                        <Logo />
                     </span>
                 </div>
                 <h2 className='text-center text-2xl font-bold leading-tight'>
@@ -48,8 +48,11 @@ function Login() {
                             Sign Up
                     </Link>
                 </p>
-                {error && <p className='text-red -600 mt-8 text-center'>
-                    {error}</p>}
+                {error && (
+                    <div className="bg-red-50 border border-red-200 p-4 mt-8 rounded-lg text-center shadow-sm">
+                        <p className="text-red-600 text-sm font-medium">{error}</p>
+                    </div>
+                )}
                     <form onSubmit={handleSubmit(login)} className='mt-8'>
                         <div className='space-y-5'>
                             <Input 

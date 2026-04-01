@@ -44,13 +44,13 @@ function Header() {
               <Logo width='70px' />
             </Link>
           </div>
-          <ul className='flex ml-auto'>
+          <ul className='flex flex-wrap items-center ml-auto gap-2 sm:gap-0 mt-2 sm:mt-0'>
             {navItems.map((item) => 
               item.active ? (
                 <li key={item.name}>
                   <button onClick={() => navigate(item.slug)}
-                    className='inline-block px-6 py-2 duration-200
-                     hover:bg-blue-100 rounded-full'>
+                    className='inline-block px-3 py-1 sm:px-6 sm:py-2 duration-200
+                     hover:bg-blue-100 rounded-full text-sm sm:text-base'>
                     {item.name}
                   </button>
                 </li>
